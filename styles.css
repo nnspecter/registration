@@ -3,20 +3,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
     
 
-    background-image: url('images/hyper.jpg'); /* Путь к картинке */
-    background-size: cover;                 /* Масштабирует под размер экрана */
-    background-position: center;            /* Центрирует картинку */
-    background-repeat: no-repeat;           /* Не повторяет */
+    background-image: url('images/hyper.jpg'); 
+    background-size: cover;                 
+    background-position: center;            
+    background-repeat: no-repeat;           
 }
 h1{
     color: lightgrey;
 }
 
 .container1 {
-    width: 400px;
-    height: 320px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
     background: transparent;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 2px;
@@ -86,5 +89,6 @@ form input:focus::placeholder {
 
 .reg{
     margin-top: 10px;
+    margin-bottom: 5px ;
     
 }
