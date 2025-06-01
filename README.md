@@ -1,2 +1,2 @@
 # registration
-Regitration form - html/css
+Regitration form - html/css/js
