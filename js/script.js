@@ -16,7 +16,8 @@ function checkForm(el){
     var name = el.username.value;
     var pass = el.password.value;
     var repass = el.repassword.value;
-    var fail; //для проверки
+    var fail=0;
+    var fail2=0 //для проверки
 
     if(name == "" || pass == "" || repass == ""){
         noname.innerHTML ="Заполните все поля";
@@ -28,29 +29,30 @@ function checkForm(el){
     }
     else{
         noname.innerHTML="";
-        fail=0;
+        fail=0
     }
 //-------------------------------------------------
     if( pass.length < 6 && pass !== ""){
         coincidence.innerHTML ="Пароль слишком короткий";
-        fail=1;
+        fail2=1;
     }
     else if (pass.split(".").length>1){
         coincidence.innerHTML ="Пароль содержит '.' ";
-        fail=1;
+        fail2=1;
     }
     else if (pass!==repass){
         coincidence.innerHTML ="Пароли не совпадают";
-        fail=1;
+        fail2=1;
     }
     else{
         coincidence.innerHTML="";
-        fail=0;
+        fail2=0;
     }
 
     if(fail==0){
         alert("Все данные корректно заполнены");
-        return true;
+        window.location = 'https://google.com' 
+        return false;
     }
     else{
         return false; 
